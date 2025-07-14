@@ -75,3 +75,31 @@ console.log(bodycount);
 
 // NaN=not a number
 console.log(5*"Hello");
+
+// Working with arrays
+// Used to store a collection of things in
+let ninjas=["donatello","mickey","raphael"];
+ninjas[2]="arshley";
+console.log(ninjas[1]);
+
+let ages=[20,20,53,57,68];
+console.log(ages[1]);
+
+// Properties 
+console.log(ninjas.length);
+
+// Methods
+result=ninjas.join(",");
+console.log(result);
+
+result=ninjas.indexOf("arshley");
+console.log(result);
+
+let concatenation=ninjas.concat(["teenage","mutant"]);
+console.log(concatenation);
+
+result=ninjas.push('ken'); //This returns the length of the new array
+console.log(result);
+
+result=ninjas.pop('ken');
+console.log(result);
