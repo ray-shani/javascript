@@ -103,3 +103,26 @@ console.log(result);
 
 result=ninjas.pop('ken');
 console.log(result);
+
+
+// Working with null and undefined
+// Null is deliberate assignment of this to the variable
+// Undefined is the deliberate unassignment of a value
+let day;
+console.log(day);
+
+
+// Working with booleans
+// Booleans are used to check if statements are true or false'
+//.inludes() used to check if s certain character is in a string
+//Later letter s in the alphabet are greater than earlier letters in the alphabet
+// Lowercase letters are greater than uppercase letters
+//Abstract equality or loose equality is where a values type is not conisdered(==) when doing comparison
+let score='100';
+score=Number(score);
+conaole.log(score*100);
+console.log(typeof score);
+
+// When you try to make something words that are not numbers you will get NaN as the result.
+//Implicit type conversion you mannually change teh data type of something
+//Explicit type conversion javascript as a language changes the data itself in the background
