@@ -51,4 +51,27 @@ console.log(results);
 
 results=email.replace('m','s');
 console.log(results);
- 
+
+
+// Working with numbers
+let radius=10;
+const pi=3.14;
+console.log(radius,pi);
+
+// Math operatos +,-,*,/
+console.log(10/2);
+let result=radius%3;
+console.log(result);
+
+result=pi*radius**2;
+ console.log(result);
+
+//  Order of operations
+// BIDMAS+>Brackets,Indices,Division,Addition,Subtraction
+
+let bodycount=30;
+bodycount+=10;//Shorthand for taking initial value plus the value added onto the other side
+console.log(bodycount);
+
+// NaN=not a number
+console.log(5*"Hello");
