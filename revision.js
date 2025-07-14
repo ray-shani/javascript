@@ -118,11 +118,58 @@ console.log(day);
 //Later letter s in the alphabet are greater than earlier letters in the alphabet
 // Lowercase letters are greater than uppercase letters
 //Abstract equality or loose equality is where a values type is not conisdered(==) when doing comparison
-let score='100';
-score=Number(score);
-conaole.log(score*100);
-console.log(typeof score);
+let scores='100';
+scores=Number(score);
+console.log(scores*100);
+console.log(typeof scores);
 
 // When you try to make something words that are not numbers you will get NaN as the result.
 //Implicit type conversion you mannually change teh data type of something
 //Explicit type conversion javascript as a language changes the data itself in the background
+
+//Practice Exercises
+
+let myName="Ray Shani";
+console.log(myName);
+console.log(typeof myName);
+
+let myAge=23;
+console.log(myAge);
+console.log(typeof myAge);
+
+let isStudent=true;
+console.log(isStudent);
+console.log(typeof isStudent);
+
+isStudent=false;
+console.log(isStudent);
+console.log(typeof isStudent);
+
+let address={
+  "city":"Nairobi",
+  "country":"Kenya"
+}
+console.log(address);
+console.log(typeof address);
+
+let hobbies=["reading","walking","singing","dancing"];
+console.log(hobbies);
+console.log(typeof hobbies);
+
+let undefinedVariable;
+console.log(undefinedVariable);
+console.log(typeof undefinedVariable);
+
+let nullVariable=null;
+console.log(nullVariable);
+console.log(typeof nullVariable);
+
+// Calculating the year of birth
+let yourName=prompt("What is your name ? ");
+let yourAge=prompt("What is your age ? ");
+let currentYear=new Date().getFullYear();
+let yearOfBirth=currentYear-yourAge;
+alert(`Your name is ${yourName} and you were born in ${yearOfBirth} `);
+
+
+
