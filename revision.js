@@ -207,3 +207,25 @@ let i=0;
 //Scope is the area a value is relevant
 
 // Working with functions
+//Functions are a reusable block of code
+//Method is a small function that does something
+function greet(){
+  console.log("Hello,there !");
+}
+greet();//This is calling/invoking a function
+
+const speak=function(){
+  console.log("Speak if you want to !");
+};
+speak();
+
+// Arrow functions
+const calcArea=(radius)=>{return 3.14*radius**2};
+const area=calcArea(9);
+console.log(area);
+
+const message=()=>"hello";
+const givenMessage=message();
+console.log(givenMessage);
+
+// Working with arrays
