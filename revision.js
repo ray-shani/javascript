@@ -1,5 +1,7 @@
 // console.log("Hello world");
 
+const { useCallback } = require("react");
+
 // let age=25;
 // let year=2019;
 // console.log(age,year);
@@ -346,3 +348,33 @@ function filterEvenNumbers(number){
   return evenNumbers;
 }
 filterEvenNumbers([1,2,3,4,66,7,88,22]);
+
+// What are promises in javascript
+// Objects that perform asynchronous functions
+// function walkDog(){
+//   setTimeout(()=>{
+//     console.log("You walk the dog");
+//     callback();
+//   },1500);
+// }
+// function cleanKitchen(callback){
+//   setTimeout(()=>{
+//     console.log("You clean the kitchen");
+//     callback();
+//   },2500);
+// }
+// function takeOutTrash(callback){
+//   setTimeout(()=>{
+//     console.log("You take out the trash");
+//     callback();
+//   },500);
+// }4
+
+// walkDog(()=>{
+//   cleanKitchen(()=>{
+//     takeOutTrash(()=>console.log("You finished all the chores"));
+//   });
+// });
+
+
+// Fetching data from APIS
