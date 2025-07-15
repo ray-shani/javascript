@@ -173,59 +173,176 @@
 
 // Working with loops and learning about them
 //for loop
-for(let i=0;i<5;i++){
-  console.log(i);
-}
-console.log("Loop finshed");
+// for(let i=0;i<5;i++){
+//   console.log(i);
+// }
+// console.log("Loop finshed");
 
-// How to loop through data
-const names=['shaun','mario','luigi'];
-for(let i=0;i<names.length;i++){//As long as i is less than the value within the array the loop will run
-console.log(names[i]);//So the loop will look at the value represented by the length of the log
-}
-console.log("The loop is finished") 
-//Everytime a codeblock is gone through that is an iteration
+// // How to loop through data
+// const names=['shaun','mario','luigi'];
+// for(let i=0;i<names.length;i++){//As long as i is less than the value within the array the loop will run
+// console.log(names[i]);//So the loop will look at the value represented by the length of the log
+// }
+// console.log("The loop is finished") 
+// //Everytime a codeblock is gone through that is an iteration
 
-// A while loop
-let i=0;
- while(i<names.length){
-    console.log(names[i]);//So through every iteration the code block will move to the next value until it has satisfied the length of the value
-  i++;
- }
+// // A while loop
+// let i=0;
+//  while(i<names.length){
+//     console.log(names[i]);//So through every iteration the code block will move to the next value until it has satisfied the length of the value
+//   i++;
+//  }
 
- //Conditional statements
- //If and else statements using logical operators
- const password="P@ssword";
- if(password.length>=4&&password.includes('@')&&password[0]==password[0].toUpperCase()){
-  console.log("This is a mighty strong password")
- }
- else{
-  console.log("Kindly add @ or make the first character uppercase");
- }
+//  //Conditional statements
+//  //If and else statements using logical operators
+//  const password="P@ssword";
+//  if(password.length>=4&&password.includes('@')&&password[0]==password[0].toUpperCase()){
+//   console.log("This is a mighty strong password")
+//  }
+//  else{
+//   console.log("Kindly add @ or make the first character uppercase");
+//  }
 
-//  Continue jumps out of the iteration that it has been told and continues to thenext iteration as the start
-//Scope is the area a value is relevant
+// //  Continue jumps out of the iteration that it has been told and continues to thenext iteration as the start
+// //Scope is the area a value is relevant
 
-// Working with functions
-//Functions are a reusable block of code
-//Method is a small function that does something
-function greet(){
-  console.log("Hello,there !");
-}
-greet();//This is calling/invoking a function
+// // Working with functions
+// //Functions are a reusable block of code
+// //Method is a small function that does something
+// function greet(){
+//   console.log("Hello,there !");
+// }
+// greet();//This is calling/invoking a function
 
-const speak=function(){
-  console.log("Speak if you want to !");
-};
-speak();
+// const speak=function(){
+//   console.log("Speak if you want to !");
+// };
+// speak();
 
-// Arrow functions
-const calcArea=(radius)=>{return 3.14*radius**2};
-const area=calcArea(9);
-console.log(area);
+// // Arrow functions
+// const calcArea=(radius)=>{return 3.14*radius**2};
+// const area=calcArea(9);
+// console.log(area);
 
-const message=()=>"hello";
-const givenMessage=message();
-console.log(givenMessage);
+// const message=()=>"hello";
+// const givenMessage=message();
+// console.log(givenMessage);
 
 // Working with arrays
+let fruits=["apple","bananas","grapes","oranges"];
+// for(let i=0;i<fruits.length;i++){
+//   console.log(fruits[i]); 
+// }
+
+//printing an array in reverse
+for(let i=fruits.length-1;i>=0;i--){
+  console.log(fruits[i]);
+}
+
+// Shorthand for loops
+fruits.sort().reverse();
+for(john of fruits){
+  
+  console.log(john);
+} 
+
+// Advanced javascript features
+//Objects in javascript
+// they ome in key value pairs and  in curly braces
+//This can be used to pull other values within the object
+
+const myFirst={jina:'Bery',
+  occupation:"Nurse",
+  area:"Kijabe",
+  men:"alot",
+  age:20,
+  hobbies:["sleep","eat","bien"],
+  drink:{
+    morning:"coffee",
+    afternoon:"Iced tea",
+    evening:"latte",
+  },
+  job:function(){
+return `Time for ${this.drink.morning}`
+  }
+}
+console.log(myFirst.job());
+
+//Object overall
+const vehicle={ 
+  wheels:4,
+  engine:function(){
+    return "Vroom";
+  },
+}
+const car=Object.create(vehicle);
+car.doors=4;
+car.engine=function(){
+  return "Whooooosh";
+}
+console.log(car.engine);
+console.log(car.wheels);
+
+const tesla=Object.create(car);
+tesla.engine=function(){
+  return "Shhhhhh";
+};
+console.log(tesla.engine());
+
+// Working with the keys and the values of objects
+const band={
+  vocals:"Citam Ngong",
+  guitar:"Valentine",
+  bass:"Kisoo",
+  Drums:"Robert",
+}
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+//A loop used to go through objects for in
+
+for(let job in band){
+  console.log(job);//When you call it this way it will give you the keeys to the objects not the values
+  console.log(band[job]);//When you do this it will give you the value of the information
+}
+
+//Destructuring objects
+//Name variables as the same names in their keys
+const person={
+  names:"Anita Tonui",
+  age:25,
+  occupation:"Pharmacist"
+};
+const {names,age,occupation}=person;
+console.log(`Her name is ${names} who is ${age} years old and is a ${occupation}`);
+
+// Using the pop and shift method
+let array=[1,2,3,4,5,6];
+array.push(7);
+console.log(array);
+array.shift();
+console.log(array);
+
+//An array accepting numbers
+// Wrong implementation
+function filterEvenNumbers(...evenNumbers){
+  for(let i=0;i<evenNumbers.length;i++){
+    if(evenNumbers[i]%2===0){
+      return(evenNumbers[i]);
+    }
+  }
+}
+let filtered=filterEvenNumbers([1,2,3,4,66,7,88,22]);
+console.log(filtered);
+
+// Correct implementation of the code
+function filterEvenNumbers(number){
+  const evenNumbers=[];
+  for(let i=0;i<number.length;i++){
+    if(number[i]%2===0){
+      evenNumbers.push(number[i]);
+    }
+  }
+  return evenNumbers;
+}
+filterEvenNumbers([1,2,3,4,66,7,88,22]);
