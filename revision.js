@@ -230,126 +230,126 @@ const { useCallback } = require("react");
 // const givenMessage=message();
 // console.log(givenMessage);
 
-// Working with arrays
-let fruits=["apple","bananas","grapes","oranges"];
-// for(let i=0;i<fruits.length;i++){
-//   console.log(fruits[i]); 
+// // Working with arrays
+// let fruits=["apple","bananas","grapes","oranges"];
+// // for(let i=0;i<fruits.length;i++){
+// //   console.log(fruits[i]); 
+// // }
+
+// //printing an array in reverse
+// for(let i=fruits.length-1;i>=0;i--){
+//   console.log(fruits[i]);
 // }
 
-//printing an array in reverse
-for(let i=fruits.length-1;i>=0;i--){
-  console.log(fruits[i]);
-}
-
-// Shorthand for loops
-fruits.sort().reverse();
-for(john of fruits){
+// // Shorthand for loops
+// fruits.sort().reverse();
+// for(john of fruits){
   
-  console.log(john);
-} 
+//   console.log(john);
+// } 
 
-// Advanced javascript features
-//Objects in javascript
-// they ome in key value pairs and  in curly braces
-//This can be used to pull other values within the object
+// // Advanced javascript features
+// //Objects in javascript
+// // they ome in key value pairs and  in curly braces
+// //This can be used to pull other values within the object
 
-const myFirst={jina:'Bery',
-  occupation:"Nurse",
-  area:"Kijabe",
-  men:"alot",
-  age:20,
-  hobbies:["sleep","eat","bien"],
-  drink:{
-    morning:"coffee",
-    afternoon:"Iced tea",
-    evening:"latte",
-  },
-  job:function(){
-return `Time for ${this.drink.morning}`
-  }
-}
-console.log(myFirst.job());
+// const myFirst={jina:'Bery',
+//   occupation:"Nurse",
+//   area:"Kijabe",
+//   men:"alot",
+//   age:20,
+//   hobbies:["sleep","eat","bien"],
+//   drink:{
+//     morning:"coffee",
+//     afternoon:"Iced tea",
+//     evening:"latte",
+//   },
+//   job:function(){
+// return `Time for ${this.drink.morning}`
+//   }
+// }
+// console.log(myFirst.job());
 
-//Object overall
-const vehicle={ 
-  wheels:4,
-  engine:function(){
-    return "Vroom";
-  },
-}
-const car=Object.create(vehicle);
-car.doors=4;
-car.engine=function(){
-  return "Whooooosh";
-}
-console.log(car.engine);
-console.log(car.wheels);
+// //Object overall
+// const vehicle={ 
+//   wheels:4,
+//   engine:function(){
+//     return "Vroom";
+//   },
+// }
+// const car=Object.create(vehicle);
+// car.doors=4;
+// car.engine=function(){
+//   return "Whooooosh";
+// }
+// console.log(car.engine);
+// console.log(car.wheels);
 
-const tesla=Object.create(car);
-tesla.engine=function(){
-  return "Shhhhhh";
-};
-console.log(tesla.engine());
+// const tesla=Object.create(car);
+// tesla.engine=function(){
+//   return "Shhhhhh";
+// };
+// console.log(tesla.engine());
 
-// Working with the keys and the values of objects
-const band={
-  vocals:"Citam Ngong",
-  guitar:"Valentine",
-  bass:"Kisoo",
-  Drums:"Robert",
-}
-console.log(Object.keys(band));
-console.log(Object.values(band));
+// // Working with the keys and the values of objects
+// const band={
+//   vocals:"Citam Ngong",
+//   guitar:"Valentine",
+//   bass:"Kisoo",
+//   Drums:"Robert",
+// }
+// console.log(Object.keys(band));
+// console.log(Object.values(band));
 
-//A loop used to go through objects for in
+// //A loop used to go through objects for in
 
-for(let job in band){
-  console.log(job);//When you call it this way it will give you the keeys to the objects not the values
-  console.log(band[job]);//When you do this it will give you the value of the information
-}
+// for(let job in band){
+//   console.log(job);//When you call it this way it will give you the keeys to the objects not the values
+//   console.log(band[job]);//When you do this it will give you the value of the information
+// }
 
-//Destructuring objects
-//Name variables as the same names in their keys
-const person={
-  names:"Anita Tonui",
-  age:25,
-  occupation:"Pharmacist"
-};
-const {names,age,occupation}=person;
-console.log(`Her name is ${names} who is ${age} years old and is a ${occupation}`);
+// //Destructuring objects
+// //Name variables as the same names in their keys
+// const person={
+//   names:"Anita Tonui",
+//   age:25,
+//   occupation:"Pharmacist"
+// };
+// const {names,age,occupation}=person;
+// console.log(`Her name is ${names} who is ${age} years old and is a ${occupation}`);
 
-// Using the pop and shift method
-let array=[1,2,3,4,5,6];
-array.push(7);
-console.log(array);
-array.shift();
-console.log(array);
+// // Using the pop and shift method
+// let array=[1,2,3,4,5,6];
+// array.push(7);
+// console.log(array);
+// array.shift();
+// console.log(array);
 
-//An array accepting numbers
-// Wrong implementation
-function filterEvenNumbers(...evenNumbers){
-  for(let i=0;i<evenNumbers.length;i++){
-    if(evenNumbers[i]%2===0){
-      return(evenNumbers[i]);
-    }
-  }
-}
-let filtered=filterEvenNumbers([1,2,3,4,66,7,88,22]);
-console.log(filtered);
+// //An array accepting numbers
+// // Wrong implementation
+// function filterEvenNumbers(...evenNumbers){
+//   for(let i=0;i<evenNumbers.length;i++){
+//     if(evenNumbers[i]%2===0){
+//       return(evenNumbers[i]);
+//     }
+//   }
+// }
+// let filtered=filterEvenNumbers([1,2,3,4,66,7,88,22]);
+// console.log(filtered);
 
-// Correct implementation of the code
-function filterEvenNumbers(number){
-  const evenNumbers=[];
-  for(let i=0;i<number.length;i++){
-    if(number[i]%2===0){
-      evenNumbers.push(number[i]);
-    }
-  }
-  return evenNumbers;
-}
-filterEvenNumbers([1,2,3,4,66,7,88,22]);
+// // Correct implementation of the code
+// function filterEvenNumbers(number){
+//   const evenNumbers=[];
+//   for(let i=0;i<number.length;i++){
+//     if(number[i]%2===0){
+//       evenNumbers.push(number[i]);
+//     }
+//   }
+//   return evenNumbers;
+// }
+// filterEvenNumbers([1,2,3,4,66,7,88,22]);
 
-// What are promises in javascript
+// // What are promises in javascript
 // Objects that perform asynchronous functions
 // function walkDog(){
 //   setTimeout(()=>{
@@ -377,4 +377,12 @@ filterEvenNumbers([1,2,3,4,66,7,88,22]);
 // });
 
 
-// Fetching data from APIS
+// Arrow functions
+//Using ana rarray and arrow functions
+//Map gets the element of each array and returns it as needed
+//Map is a higher orer function that takes another function as its parameter
+const num=[1,3,4,5,7,8,9];
+const doubled=num.map(num=>num*2);
+console.log("My first array", num);
+console.log("Doubbled array : " ,doubled);
+
